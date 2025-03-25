@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useState, ChangeEvent } from "react";
 
-const IdentificationUpload = ({ name }) => {
-  const [file, setFile] = useState(null);
+interface IdentificationUploadProps {
+  name: string;
+}
 
-  const handleFileChange = (event) => {
-    setFile(event.target.files[0]);
+const IdentificationUpload: React.FC<IdentificationUploadProps> = ({
+  name,
+}) => {
+  const [file, setFile] = useState<File | null>(null); // File type for state
+
+  // Event type for file input change
+  const handleFileChange = (event: ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files) {
+      setFile(event.target.files[0]);
+    }
   };
   return (
     <div>
