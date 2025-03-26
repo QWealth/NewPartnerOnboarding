@@ -1,12 +1,14 @@
 [package]
-name = "onboarding_api"
+name = "partner-onboarding-rust-api"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
 rocket = { version = "0.5", features = ["json"] }
-diesel = { version = "1.4", features = ["mysql", "r2d2"] }
 r2d2 = "0.8"
 dotenv = "0.15"
 rocket_sync_db_pools = "0.1"
 mysql = { version = "26.0", features = ["rustls"] }  # or use native-tls instead
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+diesel = { version = "2.0", features = ["serde_json", "mysql", "r2d2"] }
