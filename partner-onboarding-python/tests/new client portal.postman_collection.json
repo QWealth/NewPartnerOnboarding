@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "ffb112e8-3c42-4b76-8d2b-449b9709fa99",
+		"name": "new client portal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19801769"
+	},
+	"item": [
+		{
+			"name": "add user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \"Accounts\": [\n        {\n            \"accountNumber\": 1001,\n            \"entityName\": null,\n            \"firstName1\": \"John\",\n            \"firstName2\": null,\n            \"lastName1\": \"Smith\",\n            \"lastName2\": null\n        },\n        {\n            \"accountNumber\": 1002,\n            \"entityName\": null,\n            \"firstName1\": \"Jane\",\n            \"firstName2\": \"Marie\",\n            \"lastName1\": \"Doe\",\n            \"lastName2\": \"Miller\"\n        }\n    ],\n    \"Users\": [\n        {\n            \"firstName\": \"John\",\n            \"lastName\": \"Smith\",\n            \"country\": \"Canada\",\n            \"taxNumber\": \"123-45-6789\"\n        },\n                {\n            \"firstName\": \"John\",\n            \"lastName\": \"Smith\",\n            \"country\": \"USA\",\n            \"taxNumber\": \"124-44-6789\"\n        },\n        {\n            \"firstName\": \"Jane\",\n            \"lastName\": \"Miller\",\n            \"country\": \"Canada\",\n            \"taxNumber\": \"987-65-4321\"\n        }\n    ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/addUser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"addUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "postman-cloud:///1efa1e98-d81c-4a40-abf1-51511a72ec39"
+						},
+						{
+							"key": "firstName",
+							"value": "examplomas",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "examplosciuch",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/uploadId",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"uploadId"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
