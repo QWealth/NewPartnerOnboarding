@@ -1,0 +1,34 @@
+{
+    "Location": "http://qwnewclientid.s3.amazonaws.com/",
+    "Policy": {
+        "PolicyName": "UploadToNewClientIdPolicy",
+        "PolicyId": "ANPA3KXYGWUP6S6MIEWA3",
+        "Arn": "arn:aws:iam::778983355679:policy/UploadToNewClientIdPolicy",
+        "Path": "/",
+        "DefaultVersionId": "v1",
+        "AttachmentCount": 0,
+        "PermissionsBoundaryUsageCount": 0,
+        "IsAttachable": true,
+        "CreateDate": "2025-03-27T17:28:35+00:00",
+        "UpdateDate": "2025-03-27T17:28:35+00:00"
+    },
+    "Role": {
+        "Path": "/",
+        "RoleName": "UploadToNewClientIdRole",
+        "RoleId": "AROA3KXYGWUPQ6WQX5RM3",
+        "Arn": "arn:aws:iam::778983355679:role/UploadToNewClientIdRole",
+        "CreateDate": "2025-03-27T17:29:18+00:00",
+        "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Principal": {
+                        "Service": "ec2.amazonaws.com"
+                    },
+                    "Action": "sts:AssumeRole"
+                }
+            ]
+        }
+    }
+}
