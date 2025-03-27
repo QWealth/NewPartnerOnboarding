@@ -10,8 +10,8 @@ class IntakeAccount(Base):
     id = Column(Integer, primary_key=True)
     accountNumber = Column(Integer)
     entityName = Column(String(255), nullable=True)
-    firstName1 = Column(String(255))  # Varchar equivalent
-    firstName2 = Column(String(255), nullable=True)  # Nullable
+    firstName1 = Column(String(255))
+    firstName2 = Column(String(255), nullable=True)
     lastName1 = Column(String(255))
     lastName2 = Column(String(255), nullable=True)
 
