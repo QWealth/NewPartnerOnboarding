@@ -11,8 +11,8 @@ class TypedAccount(TypedDict):
 
 
 class TypedUser(TypedDict):
-    FirstName: str
-    LastName: str
+    firstName: str
+    lastName: str
     country: str
     taxNumber: str
 

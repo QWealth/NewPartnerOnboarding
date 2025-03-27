@@ -16,3 +16,4 @@ Thumbs.db
 
 /.env
 
+*.cpython-311.pyc
