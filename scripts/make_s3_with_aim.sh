@@ -59,8 +59,6 @@ aws iam attach-role-policy \
     --role-name $ROLE_NAME \
     --policy-arn $POLICY_ARN
 
-rm s3-upload-policy.json trust-policy.json
-
 echo "Setup complete:"
 echo "Bucket created: $BUCKET_NAME"
 echo "IAM Policy ARN: $POLICY_ARN"
